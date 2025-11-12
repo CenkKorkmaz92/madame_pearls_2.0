@@ -1,0 +1,161 @@
+/* Global Styles */
+
+// Import animations
+@import './styles/animations.scss';
+
+/* Color Variables */
+:root {
+    // Primary colors
+    --background: hsl(32, 40%, 96%);
+    --foreground: hsl(25, 20%, 25%);
+    
+    // Card colors
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(25, 20%, 25%);
+    
+    // Brand colors
+    --primary: hsl(202, 85%, 28%);
+    --primary-foreground: hsl(32, 40%, 96%);
+    --secondary: hsl(15, 55%, 62%);
+    --secondary-foreground: hsl(32, 40%, 96%);
+    
+    // Muted colors
+    --muted: hsl(32, 30%, 90%);
+    --muted-foreground: hsl(25, 15%, 45%);
+    
+    // Accent colors
+    --accent: hsl(38, 75%, 58%);
+    --accent-foreground: hsl(25, 20%, 25%);
+    
+    // Border and input
+    --border: hsl(32, 30%, 88%);
+    --input: hsl(32, 30%, 88%);
+    --ring: hsl(202, 85%, 28%);
+    
+    // Named colors
+    --volcanic: hsl(220, 10%, 25%);
+    --volcanic-light: hsl(220, 8%, 45%);
+    --gold: hsl(38, 75%, 58%);
+    --ocean: hsl(202, 85%, 28%);
+    --terracotta: hsl(15, 55%, 62%);
+    
+    // Legacy colors (from old design system)
+    --primary-white: #ffffff;
+    --light-beige: #f5f0e8;
+    --dark-sand: #d4c4ab;
+    --accent-gray: #8b7d6b;
+    --dark-gray: #5a5a5a;
+    --text-dark: hsl(25, 20%, 25%);
+    --text-gray: #666666;
+    
+    // Shadows
+    --shadow-elegant: 0 20px 60px -20px hsl(202 85% 28% / 0.15);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    
+    // Transitions
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    // Typography
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Lora', serif;
+    
+    // Border radius
+    --radius: 0.75rem;
+}
+
+/* Font Faces - Cormorant Garamond (Headlines & Menus) */
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('/assets/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('/assets/fonts/Cormorant_Garamond/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Font Faces - Lora (Body Text) */
+@font-face {
+    font-family: 'Lora';
+    src: url('/assets/fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('/assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings - All Caps */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Force font on all form elements and buttons */
+input,
+textarea,
+button,
+select {
+    font-family: var(--font-body);
+}
+
+/* Global Text Selection */
+::selection {
+    background-color: var(--ocean);
+    color: var(--primary-foreground);
+}
+
+::-moz-selection {
+    background-color: var(--ocean);
+    color: var(--primary-foreground);
+}
+
+/* Hide Scrollbars */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+* {
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+}

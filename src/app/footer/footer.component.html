@@ -1,0 +1,26 @@
+<footer class="footer" id="footer">
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="../../assets/images/logo/logo.webp" alt="Madame Pearls" (click)="scrollToHome()" />
+      </div>
+      
+      <div class="footer-links">
+        <a (click)="openTerms()">{{ translationService.t('footer.terms') }}</a>
+        <a (click)="openPrivacy()">{{ translationService.t('footer.privacy') }}</a>
+      </div>
+      
+      <div class="footer-social">
+        <a href="https://www.instagram.com/madame__pearls/?utm_source=ig_web_button_share_sheet" target="_blank">
+          <img src="../../assets/images/icons/instagram.webp" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-divider"></div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">{{ translationService.t('footer.copyright') }}</p>
+    </div>
+  </div>
+</footer>

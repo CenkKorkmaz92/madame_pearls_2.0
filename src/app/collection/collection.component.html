@@ -1,0 +1,70 @@
+<section class="collection" id="collection">
+  <!-- Header -->
+  <div class="collection-header">
+    <h2>{{ translationService.t('collection.title') }}</h2>
+    <p>{{ translationService.t('collection.subtitle') }}</p>
+  </div>
+  
+  <!-- Grid of 4 Categories -->
+  <div class="category-grid">
+    <div *ngFor="let category of categories" class="category-card" (click)="openModal(category)">
+      <h3 class="category-title">{{ category.label }}</h3>
+      <img [src]="category.imgSrc" [alt]="category.label" />
+    </div>
+  </div>
+
+  <!-- Category Modal -->
+  <div class="modal animate-modal" *ngIf="isModalOpen" (click)="closeModal()">
+    <div class="modal-content animate-modal-content" (click)="$event.stopPropagation()">
+      <span class="close" (click)="closeModal()">&times;</span>
+      
+      <div class="modal-header-with-nav">
+        <button class="category-nav-arrow category-nav-left" (click)="previousCategory($event)" title="Previous category">
+          <span>&lt;</span>
+        </button>
+        
+        <h2>{{ selectedCategory.label }}</h2>
+        
+        <button class="category-nav-arrow category-nav-right" (click)="nextCategory($event)" title="Next category">
+          <span>&gt;</span>
+        </button>
+      </div>
+      
+      <div class="modal-gallery">
+        <div *ngFor="let img of selectedCategory.images" class="modal-img-container">
+          <img [src]="img" alt="Jewelry Image" (click)="openImageZoom(img, $event)" />
+          <button class="favorite-star" type="button" [title]="translationService.t('collection.markFavorite')" (click)="toggleFavorite(img, $event)">
+            <span [ngClass]="{'favorited': isFavorite(img)}">★</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Zoom Modal -->
+  <div class="image-zoom-modal animate-modal" *ngIf="isImageZoomOpen" (click)="closeImageZoom()">
+    <div class="image-zoom-content animate-zoom-content" (click)="$event.stopPropagation()">
+      <span class="close zoom-close" (click)="closeImageZoom()">&times;</span>
+      
+      <!-- Previous Arrow -->
+      <button class="nav-arrow nav-arrow-left" (click)="previousImage($event)" title="Previous image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      
+      <img [src]="selectedZoomImage" alt="Zoomed Jewelry Image" class="zoomed-image" />
+      
+      <!-- Next Arrow -->
+      <button class="nav-arrow nav-arrow-right" (click)="nextImage($event)" title="Next image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+      
+      <button class="favorite-star zoom-favorite" type="button" title="{{ translationService.t('collection.markFavorite') }}" (click)="toggleFavorite(selectedZoomImage, $event)">
+        <span [ngClass]="{'favorited': isFavorite(selectedZoomImage)}">★</span>
+      </button>
+    </div>
+  </div>
+</section>

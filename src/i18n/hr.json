@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "Početna",
+    "collection": "Kolekcija",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "partners": "Partneri"
+  },
+  "hero": {
+    "subtitle": "KAMENJE IZ SANTORINIJA",
+    "title": "Vulkanska Elegancija",
+    "description": "Jedinstveni nakit ručno izrađen s autentičnim vulkanskim kamenjem iz drevnog krajolika Santorinija",
+    "btnCollection": "Istražite Kolekciju",
+    "btnStory": "Naša Priča"
+  },
+  "about": {
+    "subtitle": "PRIČA IZA KOLEKCIJE",
+    "title": "Rođeno od Vatre i Mora",
+    "p1": "Svaki komad naše kolekcije započinje svoje putovanje u vulkanskom krajoliku Santorinija, gdje su drevne erupcije oblikovale zemlju u nešto izuzetno. Ovo dragocjeno kamenje potječe iz jedinstvenih geoloških formacija otoka.",
+    "p2": "Tijekom svojih posjeta Grčkoj, radim s pouzdanim obrtničkim koji pažljivo odabire svaki vulkanski kamen prema njegovom jedinstvenom karakteru – suptilne varijacije boja, glatku teksturu oblikovanu stoljećima prirodnih elemenata. Oni stručno prerađuju ove autentične kamenje Santorinija u prekrasne perle koje se zatim isporučuju u moj studio u Njemačkoj, gdje se događa čarolija.",
+    "p3": "Svaka narukvica i ogrlica ručno je izrađena s namjerom, spajajući tradicionalne tehnike sa suvremenim dizajnom. Rezultat je nakit koji vas povezuje s divljom ljepotom Santorinija dok istovremeno donosi eleganciju u vaš svakodnevni život.",
+    "quote": "Oživljavanje vulkanske ljepote Santorinija, komad po komad."
+  },
+  "collection": {
+    "title": "Naša Kolekcija",
+    "subtitle": "Svaki komad je jedinstven, ručno izrađen s vulkanskim kamenjem iz drevnog krajolika Santorinija",
+    "viewCollection": "Pogledaj kolekciju",
+    "markFavorite": "Označi za kontakt obrazac",
+    "women": "Dame",
+    "men": "Gospoda",
+    "kids": "Djeca",
+    "necklace": "Za sve"
+  },
+  "contact": {
+    "heading": "Kontaktirajte me",
+    "intro1": "Veselim se vašoj poruci!",
+    "intro2": "Imate li na umu neku narukvicu?",
+    "intro3": "Ili pitanje o našim komadima?",
+    "intro4": "Koristite obrazac za kontakt — rado ću vas čuti!",
+    "intro5": "Tražite ručno izrađen nakit? Javite se!",
+    "sendMessage": "Pošaljite poruku",
+    "yourName": "Vaše ime",
+    "yourEmail": "Vaš email",
+    "yourMessage": "Vaša poruka",
+    "favoritesHint": "Dodali ste sljedeće slike iz kolekcije kao favorite:",
+    "favoritesEmpty": "Možete odabrati slike iz kolekcije i priložiti ih kao favorite svojoj poruci.",
+    "remove": "Ukloni",
+    "close": "Zatvori",
+    "contactMe": "Kontaktirajte me :)"
+  },
+  "footer": {
+    "terms": "Uvjeti korištenja",
+    "privacy": "Pravila privatnosti",
+    "copyright": "© 2025 Madame Pearls by VA. Sva prava pridržana."
+  },
+  "partners": {
+    "heading": "Naša partnerska trgovina u Hrvatskoj",
+    "intro1": "je prekrasna trgovina nakitom u Hrvatskoj koja sada nudi i naš ručno izrađen nakit.",
+    "intro2": "Posjetite ih u Hrvatskoj ako ste u blizini ili ih pratite online kako biste vidjeli što rade.",
+    "fbLink": "SilverGold Partner na Facebooku"
+  }
+}

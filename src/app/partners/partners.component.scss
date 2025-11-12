@@ -1,0 +1,129 @@
+html {
+    margin: 0;
+}
+
+.partners {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-dark);
+    overflow: hidden;
+    gap: 32px;
+    background-image: url('../../assets/images/backgrounds/beche background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 64px 22px 64px;
+}
+
+.partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/images/backgrounds/beche background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: 3px solid var(--dark-sand);
+    padding: 24px 16px;
+    gap: 16px;
+    max-width: 400px;
+    box-shadow: 0 15px 50px var(--shadow-medium);
+}
+
+.store-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--dark-sand);
+    margin-bottom: 16px;
+    background: var(--light-beige);
+}
+
+.partner-card h2 {
+    font-size: 30px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.partner-card p {
+    color: var(--text-dark);
+    text-align: center;
+    margin: 8px 0;
+    font-size: 24px;
+    opacity: 0.93;
+}
+
+.fb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 13px;
+    color: var(--accent-gray);
+    font-weight: 500;
+    font-size: 17.6px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fb-link .icon {
+    width: 28px;
+    height: 28px;
+}
+
+.fb-link:hover {
+    transform: scale(1.1);
+    color: var(--dark-gray);
+    text-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-indicator .line {
+    flex: 0 0 50px;
+    height: 2px;
+    background: var(--accent-gray);
+}
+
+.scroll-indicator .arrow {
+    font-size: 24px;
+    color: var(--accent-gray);
+    padding: 8px;
+    border: 2px solid var(--accent-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s infinite;
+    background: var(--primary-white);
+    transition: all 0.3s ease;
+}
+
+.scroll-indicator .arrow:hover {
+    cursor: pointer;
+    background: var(--accent-gray);
+    color: var(--primary-white);
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

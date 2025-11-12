@@ -1,0 +1,18 @@
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-subtitle">{{ translationService.t('hero.subtitle') }}</p>
+      <h1 class="hero-title">{{ translationService.t('hero.title') }}</h1>
+      <p class="hero-description">
+        {{ translationService.t('hero.description') }}
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" (click)="scrollToCollection()">{{ translationService.t('hero.btnCollection') }}</button>
+        <button class="btn-secondary" (click)="scrollToAbout()">{{ translationService.t('hero.btnStory') }}</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/backgrounds/hero-jewelry.webp" alt="Volcanic Stone Jewelry">
+    </div>
+  </div>
+</section>

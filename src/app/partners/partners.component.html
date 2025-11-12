@@ -1,0 +1,23 @@
+<section class="partners" id="partners">
+    <div class="partner-card">
+        <img src="../../assets/images/logo/silvergoldpartner_logo.webp" alt="SilverGold Partner Croatia" class="store-logo" />
+        <h2>{{ translationService.t('partners.heading') }}</h2>
+        <p>
+            <strong>SilverGold Partner</strong> {{ translationService.t('partners.intro1') }}
+        </p>
+        <p>
+            {{ translationService.t('partners.intro2') }}
+        </p>
+        <a class="fb-link"
+            href="https://www.facebook.com/silvergoldpartner?mibextid=wwXIfr&rdid=McatLvVS9kRVMs40&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19h6Tzb3sT%2F%3Fmibextid%3DwwXIfr#"
+            target="_blank" rel="noopener">
+            <img src="../../assets/images/icons/facebook_logo.webp" alt="Facebook" class="icon" />
+            {{ translationService.t('partners.fbLink') }}
+        </a>
+    </div>
+    <div class="scroll-indicator">
+        <div class="line"></div>
+        <div class="arrow" (click)="scrollToHero()">&#x2191;</div>
+        <div class="line"></div>
+    </div>
+</section>

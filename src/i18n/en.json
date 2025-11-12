@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "Home",
+    "collection": "Collection",
+    "about": "About",
+    "contact": "Contact",
+    "partners": "Partners"
+  },
+  "hero": {
+    "subtitle": "STONES FROM SANTORINI",
+    "title": "Volcanic Elegance",
+    "description": "Unique jewelry pieces handcrafted with authentic volcanic stones sourced from Santorini's ancient landscape",
+    "btnCollection": "Explore Collection",
+    "btnStory": "Our Story"
+  },
+  "about": {
+    "subtitle": "THE STORY BEHIND",
+    "title": "Born from Fire & Sea",
+    "p1": "Each piece in our collection begins its journey in the volcanic landscape of Santorini, where ancient eruptions shaped the earth into something extraordinary. These precious stones come from the island's unique geological formations.",
+    "p2": "During my visits to Greece, I work with a trusted artisan who carefully selects each volcanic stone for its unique character—the subtle variations in color, the smooth texture shaped by centuries of natural elements. They expertly craft these authentic Santorini stones into beautiful beads, which are then delivered to my studio in Germany where the magic happens.",
+    "p3": "Every bracelet and necklace is handcrafted with intention, combining traditional techniques with contemporary design. The result is jewelry that connects you to the raw beauty of Santorini while adding elegance to your everyday moments.",
+    "quote": "Bringing Santorini's volcanic beauty to life, one piece at a time."
+  },
+  "collection": {
+    "title": "Our Collection",
+    "subtitle": "Each piece is unique, handcrafted with volcanic stones sourced from Santorini's ancient landscape",
+    "viewCollection": "View Collection",
+    "markFavorite": "Mark for contact form",
+    "women": "Ladies",
+    "men": "Gentlemen",
+    "kids": "Kids",
+    "necklace": "Necklaces"
+  },
+  "contact": {
+    "heading": "Contact Me",
+    "intro1": "I am happy to hear from you!",
+    "intro2": "Have a Bracelet in mind?",
+    "intro3": "Or a question about our pieces?",
+    "intro4": "Use the form to reach out — I'd love to hear from you!",
+    "intro5": "Looking for handcrafted jewelry? Let's talk!",
+    "sendMessage": "Send a Message",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "yourMessage": "Your Message",
+    "favoritesHint": "You have added the following images from the collection as favorites:",
+    "favoritesEmpty": "You can select images from the collection and attach them as favorites to your message.",
+    "remove": "Remove",
+    "close": "Close",
+    "contactMe": "Contact Me :)"
+  },
+  "footer": {
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2025 Madame Pearls by VA. All rights reserved."
+  },
+  "partners": {
+    "heading": "Our Partner Store in Croatia",
+    "intro1": "is a beautiful jewelry store in Croatia now offering our handcrafted jewelry.",
+    "intro2": "Visit them in Croatia if you are around or follow them online to explore what they do.",
+    "fbLink": "SilverGold Partner on Facebook"
+  }
+}

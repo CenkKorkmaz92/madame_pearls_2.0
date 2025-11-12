@@ -1,0 +1,62 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "collection": "Kollektion",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "partners": "Partner"
+  },
+  "hero": {
+    "subtitle": "STEINE AUS SANTORINI",
+    "title": "Vulkanische Eleganz",
+    "description": "Einzigartige Schmuckstücke, handgefertigt mit authentischen vulkanischen Steinen aus der antiken Landschaft Santorinis",
+    "btnCollection": "Kollektion Entdecken",
+    "btnStory": "Unsere Geschichte"
+  },
+  "about": {
+    "subtitle": "DIE GESCHICHTE DAHINTER",
+    "title": "Geboren aus Feuer & Meer",
+    "p1": "Jedes Stück unserer Kollektion beginnt seine Reise in der vulkanischen Landschaft Santorinis, wo uralte Eruptionen die Erde zu etwas Außergewöhnlichem formten. Diese wertvollen Steine stammen aus den einzigartigen geologischen Formationen der Insel.",
+    "p2": "Bei meinen Besuchen in Griechenland arbeite ich mit einem vertrauenswürdigen Kunsthandwerker zusammen, der jeden vulkanischen Stein sorgfältig nach seinem einzigartigen Charakter auswählt – die subtilen Farbvariationen, die glatte Textur, die durch Jahrhunderte natürlicher Elemente geformt wurde. Sie verarbeiten diese authentischen Santorini-Steine fachmännisch zu wunderschönen Perlen, die dann in mein Studio in Deutschland geliefert werden, wo die Magie geschieht.",
+    "p3": "Jedes Armband und jede Halskette wird mit Absicht handgefertigt, wobei traditionelle Techniken mit zeitgenössischem Design kombiniert werden. Das Ergebnis ist Schmuck, der Sie mit der rohen Schönheit Santorinis verbindet und gleichzeitig Eleganz in Ihren Alltag bringt.",
+    "quote": "Santorinis vulkanische Schönheit zum Leben erwecken, ein Stück nach dem anderen."
+  },
+  "collection": {
+    "title": "Unsere Kollektion",
+    "subtitle": "Jedes Stück ist einzigartig, handgefertigt mit vulkanischen Steinen aus der antiken Landschaft Santorinis",
+    "viewCollection": "Kollektion ansehen",
+    "markFavorite": "Für das Kontaktformular markieren",
+    "women": "Damen",
+    "men": "Herren",
+    "kids": "Kinder",
+    "necklace": "Halsketten"
+  },
+  "contact": {
+    "heading": "Kontaktieren Sie mich",
+    "intro1": "Ich freue mich auf Ihre Nachricht!",
+    "intro2": "Haben Sie ein Armband im Kopf?",
+    "intro3": "Oder eine Frage zu unseren Stücken?",
+    "intro4": "Nutzen Sie das Formular, um Kontakt aufzunehmen – ich freue mich von Ihnen zu hören!",
+    "intro5": "Sie suchen handgefertigten Schmuck? Lassen Sie uns sprechen!",
+    "sendMessage": "Nachricht senden",
+    "yourName": "Ihr Name",
+    "yourEmail": "Ihre E-Mail",
+    "yourMessage": "Ihre Nachricht",
+    "favoritesHint": "Folgende Bilder aus der Kollektion haben Sie als Favorit hinzugefügt:",
+    "favoritesEmpty": "Sie können Bilder aus der Kollektion auswählen und sie Ihrer Nachricht als Favorit beifügen.",
+    "remove": "Entfernen",
+    "close": "Schließen",
+    "contactMe": "Kontaktieren Sie mich :)"
+  },
+  "footer": {
+    "terms": "AGB",
+    "privacy": "Datenschutz",
+    "copyright": "© 2025 Madame Pearls by VA. Alle Rechte vorbehalten."
+  },
+  "partners": {
+    "heading": "Unser Partnergeschäft in Kroatien",
+    "intro1": "ist ein wunderschönes Schmuckgeschäft in Kroatien, das nun auch unseren handgefertigten Schmuck anbietet.",
+    "intro2": "Besuchen Sie sie in Kroatien, wenn Sie in der Nähe sind, oder folgen Sie ihnen online, um zu entdecken, was sie tun.",
+    "fbLink": "SilverGold Partner auf Facebook"
+  }
+}

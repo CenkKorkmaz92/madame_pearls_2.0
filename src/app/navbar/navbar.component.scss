@@ -1,0 +1,187 @@
+/* Navbar Component */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url('../../assets/images/backgrounds/beche background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  height: 80px;
+  transition: var(--transition-smooth);
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-header-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    border: 2px solid var(--dark-sand);
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  p {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--foreground);
+    pointer-events: none;
+    letter-spacing: 0.5px;
+    font-family: var(--font-display);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+
+/* Center Menu - Lovable Style */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+
+  .spacer {
+    display: none;
+  }
+
+  li {
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+
+    a {
+      text-decoration: none;
+      color: var(--muted-foreground);
+      transition: color 0.2s ease;
+      cursor: pointer;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--ocean);
+        transition: width 0.3s ease;
+      }
+    }
+
+    &:hover a {
+      color: var(--foreground);
+      
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Language Flags Selector
+   ========================================================================== */
+.lang-container {
+  display: flex;
+  align-items: center;
+}
+
+.language-flags {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.flag-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  &:hover:not([disabled]) {
+    transform: scale(1.1);
+    border-color: var(--ocean);
+  }
+
+  &.active {
+    border-color: var(--ocean);
+    box-shadow: 0 4px 12px rgba(0, 109, 156, 0.3);
+    transform: scale(1.05);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+/* Custom Dropdown - Hidden */
+.custom-select {
+  display: none;
+}
+
+.dropdown-options {
+  display: none;
+}
+
+.nav-links.blocked,
+.nav-links.blocked * {
+  pointer-events: none !important;
+  opacity: 0.6;
+  user-select: none;
+}
+
+.nav-links .disabled {
+  color: #aaa !important;
+  cursor: not-allowed !important;
+  text-shadow: none !important;
+}
+
+.custom-select.disabled {
+  pointer-events: none !important;
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}

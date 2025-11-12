@@ -1,0 +1,109 @@
+/* Lovable About/Our Story Style - Exact from Lovable CSS */
+.about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 64px;
+  background-image: url('../../assets/images/backgrounds/beche background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 4rem;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.about-image {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    background-image: linear-gradient(
+      to top right,
+      hsl(var(--primary) / 0.1),
+      transparent,
+      hsl(var(--secondary) / 0.1)
+    );
+    pointer-events: none;
+  }
+  
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  }
+}
+
+.about-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--terracotta);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--ocean);
+    transform-origin: left;
+  }
+}
+
+.about-title {
+  font-size: 48px;
+  color: var(--foreground);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-family: var(--font-display);
+}
+
+.about-description {
+  font-size: 24px;
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-quote {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--volcanic-light);
+  line-height: 1.6;
+  margin-top: 32px;
+  padding-left: 24px;
+  border-left: 3px solid var(--gold);
+}
+
+.profile-img-container {
+  display: none;
+}
+
+.bio-section {
+  display: none;
+}
+
+.scroll-indicator {
+  display: none;
+}

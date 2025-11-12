@@ -1,0 +1,55 @@
+<section class="contact" id="contact">
+  <div class="contact-content">
+    <div class="contact-intro">
+      <h2>{{ translationService.t('contact.heading') }}</h2>
+      <p>{{ translationService.t('contact.intro1') }}</p>
+      <p>{{ translationService.t('contact.intro2') }}</p>
+      <p>{{ translationService.t('contact.intro3') }}</p>
+      <p>{{ translationService.t('contact.intro4') }}</p>
+      <p>{{ translationService.t('contact.intro5') }}</p>
+    </div>
+
+    <div class="contact-form">
+      <h2>{{ translationService.t('contact.sendMessage') }}</h2>
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input type="text" name="name" [placeholder]="translationService.t('contact.yourName')" ngModel required />
+        <input type="email" name="email" [placeholder]="translationService.t('contact.yourEmail')" ngModel required />
+        <textarea class="message-textarea" name="message" [placeholder]="translationService.t('contact.yourMessage')" rows="5" ngModel
+          required></textarea>
+
+        <div *ngIf="favoriteImages.length > 0" class="favorites-hint">
+          <span>{{ translationService.t('contact.favoritesHint') }}</span>
+        </div>
+
+        <div *ngIf="favoriteImages.length === 0" class="favorites-empty">
+          <em>{{ translationService.t('contact.favoritesEmpty') }}</em>
+        </div>
+
+        <!-- Favorisierte Bilder Vorschau -->
+        <div class="favorites-preview" *ngIf="favoriteImages.length > 0" #filePreviewContainer>
+          <div *ngFor="let img of favoriteImages; let i = index" class="favorite-image">
+            <img [src]="img" alt="Favorisiertes Bild" (click)="openPreview(img, i)" tabindex="0" />
+            <button type="button" (click)="removeFavoriteImage(i)" aria-label="Remove">🗑️</button>
+          </div>
+        </div>
+
+        <!-- Image Preview Modal -->
+        <div class="image-zoom-modal" *ngIf="previewImage" (click)="closePreview()">
+          <div class="image-zoom-content" (click)="$event.stopPropagation()">
+            <span class="close zoom-close" (click)="closePreview()">&times;</span>
+            
+            <img [src]="previewImage" alt="Preview Favorite" class="zoomed-image" />
+            
+            <button class="favorite-star zoom-favorite" type="button" [title]="translationService.t('contact.remove')" (click)="removePreviewImage()">
+              <span class="favorited">★</span>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="!contactForm.form.valid">
+          {{ translationService.t('contact.contactMe') }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
