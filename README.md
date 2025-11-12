@@ -1,28 +1,47 @@
-# VanessaHomepage
+# Madame Pearls 2.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.13.
-This Project is not finished as it is a project that will be reworked.
+A complete rework of the original [Madame-Pearls](https://github.com/CenkKorkmaz92/Madame-Pearls) project. This elegant jewelry showcase website features a modern Angular 18+ architecture with comprehensive internationalization support.
 
-## Development server
+## Features
+
+- **Multi-Language Support**: Full internationalization with English, German, Greek, and Croatian translations
+- **Custom Font System**: Cormorant Garamond for headlines and Lora for body text (variable fonts)
+- **Responsive Modal System**: Consistent image zoom modals with navigation and favorites functionality
+- **Favorites System**: Select up to 5 favorite items and preview them in the contact form
+- **Modern Design**: Clean, elegant UI with smooth animations and scroll interactions
+- **SEO Ready**: Server-side rendering support with Angular Universal
+
+## Technology Stack
+
+- Angular 18+
+- TypeScript
+- SCSS
+- RxJS
+- Standalone Components
+- Custom Translation Service
+
+## Development Server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Project Structure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Components**: Navbar, Hero, About, Collection, Contact, Partners, Footer
+- **Services**: TranslationService, FavoritesService, ModalService, ModalLegalService
+- **Translations**: Located in `src/i18n/` (en.json, de.json, gr.json, hr.json)
+- **Assets**: Custom fonts, images, and backgrounds in `src/assets/`
 
-## Running end-to-end tests
+## Languages
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- 🇬🇧 English (EN)
+- 🇩🇪 German (DE)
+- 🇬🇷 Greek (GR)
+- 🇭🇷 Croatian (HR)
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is private and proprietary.
