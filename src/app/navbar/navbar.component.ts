@@ -34,6 +34,11 @@ export class NavbarComponent {
     this.translationService.setLanguage(lang);
   }
 
+  onNavClick(): void {
+    this.isMenuOpen = false;
+    this.modalService.triggerCloseModal();
+  }
+
   onNavbarButtonClick(): void {
     this.modalService.triggerCloseModal();
   }

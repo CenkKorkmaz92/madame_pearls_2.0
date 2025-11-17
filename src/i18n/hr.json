@@ -24,12 +24,13 @@
   "collection": {
     "title": "Naša Kolekcija",
     "subtitle": "Svaki komad je jedinstven, ručno izrađen s vulkanskim kamenjem iz drevnog krajolika Santorinija",
-    "viewCollection": "Pogledaj kolekciju",
+    "viewCollection": "Pogledaj Kolekciju",
     "markFavorite": "Označi za kontakt obrazac",
+    "close": "Zatvori",
     "women": "Dame",
     "men": "Gospoda",
     "kids": "Djeca",
-    "necklace": "Za sve"
+    "necklace": "Ogrlice"
   },
   "contact": {
     "heading": "Kontaktirajte me",

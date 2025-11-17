@@ -4,31 +4,80 @@
         <div class="left-header-container">
             <img class="logo" id="logo" (click)="!modalIsOpen && scrollToHome()" src="../../assets/images/logo/logo.webp"
                 alt="Logo">
-            <p>Madame<br>Pearls by VA</p>
+            <p class="logo-text">Madame<br>Pearls by VA</p>
         </div>
 
+        <!-- Mobile: Hamburger Menu Button -->
+        <button class="hamburger" 
+                [class.active]="isMenuOpen" 
+                (click)="toggleMenu()"
+                [disabled]="modalIsOpen"
+                aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <!-- Center: Navigation Menu -->
-        <ul class="nav-links" [class.blocked]="modalIsOpen">
+        <ul class="nav-links" [class.blocked]="modalIsOpen" [class.mobile-open]="isMenuOpen">
             <li class="spacer">•</li>
-            <li><a href="#home" (click)="!modalIsOpen && onNavbarButtonClick()" [class.disabled]="modalIsOpen"
+            <li><a href="#home" (click)="!modalIsOpen && onNavClick()" [class.disabled]="modalIsOpen"
                     [attr.tabindex]="modalIsOpen ? -1 : null">{{ translationService.t('navbar.home') }}</a></li>
             <li class="spacer">•</li>
-            <li><a href="#collection" (click)="!modalIsOpen && onNavbarButtonClick()" [class.disabled]="modalIsOpen"
+            <li><a href="#collection" (click)="!modalIsOpen && onNavClick()" [class.disabled]="modalIsOpen"
                     [attr.tabindex]="modalIsOpen ? -1 : null">{{ translationService.t('navbar.collection') }}</a></li>
             <li class="spacer">•</li>
-            <li><a href="#about" (click)="!modalIsOpen && onNavbarButtonClick()" [class.disabled]="modalIsOpen"
+            <li><a href="#about" (click)="!modalIsOpen && onNavClick()" [class.disabled]="modalIsOpen"
                     [attr.tabindex]="modalIsOpen ? -1 : null">{{ translationService.t('navbar.about') }}</a></li>
             <li class="spacer">•</li>
-            <li><a href="#contact" (click)="!modalIsOpen && onNavbarButtonClick()" [class.disabled]="modalIsOpen"
+            <li><a href="#contact" (click)="!modalIsOpen && onNavClick()" [class.disabled]="modalIsOpen"
                     [attr.tabindex]="modalIsOpen ? -1 : null">{{ translationService.t('navbar.contact') }}</a></li>
             <li class="spacer">•</li>
-            <li><a href="#partners" (click)="!modalIsOpen && onNavbarButtonClick()" [class.disabled]="modalIsOpen"
+            <li><a href="#partners" (click)="!modalIsOpen && onNavClick()" [class.disabled]="modalIsOpen"
                     [attr.tabindex]="modalIsOpen ? -1 : null">{{ translationService.t('navbar.partners') }}</a></li>
             <li class="spacer">•</li>
+
+            <!-- Language Flags in Mobile Menu -->
+            <li class="mobile-lang-container">
+                <div class="language-flags" [class.disabled]="modalIsOpen">
+                    <button 
+                        class="flag-btn" 
+                        [class.active]="selectedLanguage === 'en'"
+                        (click)="!modalIsOpen && selectLanguage('en')"
+                        [disabled]="modalIsOpen"
+                        title="English">
+                        <img src="../../assets/images/icons/united-kingdom.webp" alt="English" />
+                    </button>
+                    <button 
+                        class="flag-btn" 
+                        [class.active]="selectedLanguage === 'de'"
+                        (click)="!modalIsOpen && selectLanguage('de')"
+                        [disabled]="modalIsOpen"
+                        title="Deutsch">
+                        <img src="../../assets/images/icons/germany.webp" alt="Deutsch" />
+                    </button>
+                    <button 
+                        class="flag-btn" 
+                        [class.active]="selectedLanguage === 'gr'"
+                        (click)="!modalIsOpen && selectLanguage('gr')"
+                        [disabled]="modalIsOpen"
+                        title="Ελληνικά">
+                        <img src="../../assets/images/icons/greece.webp" alt="Ελληνικά" />
+                    </button>
+                    <button 
+                        class="flag-btn" 
+                        [class.active]="selectedLanguage === 'hr'"
+                        (click)="!modalIsOpen && selectLanguage('hr')"
+                        [disabled]="modalIsOpen"
+                        title="Hrvatski">
+                        <img src="../../assets/images/icons/croatia.webp" alt="Hrvatski" />
+                    </button>
+                </div>
+            </li>
         </ul>
 
-        <!-- Right: Language Selector -->
-        <div class="lang-container">
+        <!-- Right: Language Selector (Desktop) -->
+        <div class="lang-container desktop-lang">
             <div class="language-flags" [class.disabled]="modalIsOpen">
                 <button 
                     class="flag-btn" 

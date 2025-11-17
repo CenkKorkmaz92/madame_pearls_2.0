@@ -107,3 +107,110 @@
 .scroll-indicator {
   display: none;
 }
+
+/* Responsive Design
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .about {
+    padding: 60px 40px;
+  }
+
+  .about-content {
+    gap: 3rem;
+  }
+
+  .about-title {
+    font-size: 42px;
+  }
+
+  .about-description {
+    font-size: 20px;
+  }
+
+  .about-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 50px 24px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-image {
+    max-width: 500px;
+    margin: 0 auto;
+
+    img {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  .about-subtitle {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
+
+  .about-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .about-quote {
+    font-size: 16px;
+    margin-top: 24px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 16px;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .about-image img {
+    border-radius: 12px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+
+    &::after {
+      bottom: -3px;
+    }
+  }
+
+  .about-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .about-description {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .about-quote {
+    font-size: 16px;
+    margin-top: 20px;
+    padding-left: 16px;
+    border-left-width: 2px;
+  }
+}

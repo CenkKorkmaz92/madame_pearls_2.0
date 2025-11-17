@@ -1,8 +1,12 @@
 <div class="legal-modal-backdrop" *ngIf="isOpen" (click)="onBackdropClick($event)">
   <div class="legal-modal-container">
+    <div class="legal-modal-top-bar">
+      <img src="assets/images/logo/logo.webp" alt="Madame Pearls Logo" class="modal-logo" />
+      <button class="close-btn" (click)="close()" aria-label="Close">{{ translationService.t('collection.close') }}</button>
+    </div>
+
     <div class="legal-modal-header">
       <h2>{{ currentModal === 'terms' ? translationService.t('footer.terms') : translationService.t('footer.privacy') }}</h2>
-      <button class="close-btn" (click)="close()" aria-label="Close">×</button>
     </div>
 
     <div class="legal-modal-content">

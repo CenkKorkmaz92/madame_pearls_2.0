@@ -23,9 +23,10 @@
   },
   "collection": {
     "title": "Unsere Kollektion",
-    "subtitle": "Jedes Stück ist einzigartig, handgefertigt mit vulkanischen Steinen aus der antiken Landschaft Santorinis",
+    "subtitle": "Jedes Stück ist einzigartig, handgefertigt mit vulkanischen Steinen aus Santorinis antiker Landschaft",
     "viewCollection": "Kollektion ansehen",
-    "markFavorite": "Für das Kontaktformular markieren",
+    "markFavorite": "Für Kontaktformular markieren",
+    "close": "Schließen",
     "women": "Damen",
     "men": "Herren",
     "kids": "Kinder",

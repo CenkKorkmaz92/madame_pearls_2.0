@@ -16,7 +16,10 @@
   <!-- Category Modal -->
   <div class="modal animate-modal" *ngIf="isModalOpen" (click)="closeModal()">
     <div class="modal-content animate-modal-content" (click)="$event.stopPropagation()">
-      <span class="close" (click)="closeModal()">&times;</span>
+      <div class="modal-top-bar">
+        <img src="assets/images/logo/logo.webp" alt="Madame Pearls Logo" class="modal-logo" />
+        <button class="modal-close-btn" (click)="closeModal()" title="Close">{{ translationService.t('collection.close') }}</button>
+      </div>
       
       <div class="modal-header-with-nav">
         <button class="category-nav-arrow category-nav-left" (click)="previousCategory($event)" title="Previous category">

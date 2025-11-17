@@ -15,6 +15,9 @@
   z-index: 1000;
   height: 80px;
   transition: var(--transition-smooth);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .navbar-inner {
@@ -184,4 +187,240 @@
   pointer-events: none !important;
   opacity: 0.5;
   cursor: not-allowed !important;
+}
+
+/* Hamburger Menu Button (Mobile Only)
+   ========================================================================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--foreground);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  &.active span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+  }
+
+  &.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.active span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+/* Mobile Language Container (Hidden by default)
+   ========================================================================== */
+.mobile-lang-container {
+  display: none;
+}
+
+/* Responsive Design
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .navbar-inner {
+    padding: 0 40px;
+  }
+
+  .nav-links {
+    gap: 24px;
+
+    li {
+      font-size: 20px;
+    }
+  }
+
+  .left-header-container {
+    .logo {
+      height: 45px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-inner {
+    padding: 0 24px;
+  }
+
+  .left-header-container {
+    .logo {
+      height: 40px;
+    }
+
+    .logo-text {
+      font-size: 16px;
+    }
+  }
+
+  /* Show hamburger button */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide desktop language selector */
+  .desktop-lang {
+    display: none;
+  }
+
+  /* Mobile menu styles */
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url('../../assets/images/backgrounds/beche background.webp');
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    padding: 48px 0;
+    margin: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    &.mobile-open {
+      transform: translateX(0);
+    }
+
+    .spacer {
+      display: none;
+    }
+
+    li {
+      font-size: 28px;
+      text-align: center;
+      width: 100%;
+
+      a {
+        display: block;
+        padding: 12px 24px;
+        color: var(--foreground);
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:hover a {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+      }
+    }
+  }
+
+  /* Show mobile language container */
+  .mobile-lang-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--dark-sand);
+
+    .language-flags {
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-inner {
+    padding: 0 16px;
+  }
+
+  .left-header-container {
+    gap: 8px;
+
+    .logo {
+      height: 35px;
+    }
+
+    .logo-text {
+      font-size: 16px;
+    }
+  }
+
+  .hamburger {
+    width: 26px;
+    height: 20px;
+
+    span {
+      height: 2.5px;
+    }
+
+    &.active span:nth-child(1) {
+      transform: translateY(8.75px) rotate(45deg);
+    }
+
+    &.active span:nth-child(3) {
+      transform: translateY(-8.75px) rotate(-45deg);
+    }
+  }
+
+  .nav-links {
+    top: 60px;
+    height: calc(100vh - 60px);
+    gap: 0;
+    padding: 40px 0;
+
+    li {
+      font-size: 24px;
+
+      a {
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .mobile-lang-container {
+    .language-flags {
+      gap: 12px;
+    }
+
+    .flag-btn {
+      width: 36px;
+      height: 36px;
+    }
+  }
 }
