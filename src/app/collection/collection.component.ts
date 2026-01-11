@@ -48,60 +48,60 @@ export class CollectionComponent implements OnInit {
       {
         label: this.translationService.t('collection.men'),
         description: 'Handwoven bracelets featuring smooth volcanic stones in charcoal tones',
-        imgSrc: '../../assets/images/collection/men/men_6.webp',
+        imgSrc: 'assets/images/collection/men/men_6.webp',
         images: [
-          '../../assets/images/collection/men/men_1.webp',
-          '../../assets/images/collection/men/men_2.webp',
-          '../../assets/images/collection/men/men_3.webp',
-          '../../assets/images/collection/men/men_4.webp',
-          '../../assets/images/collection/men/men_5.webp',
-          '../../assets/images/collection/men/men_6.webp',
-          '../../assets/images/collection/men/men_7.webp'
+          'assets/images/collection/men/men_1.webp',
+          'assets/images/collection/men/men_2.webp',
+          'assets/images/collection/men/men_3.webp',
+          'assets/images/collection/men/men_4.webp',
+          'assets/images/collection/men/men_5.webp',
+          'assets/images/collection/men/men_6.webp',
+          'assets/images/collection/men/men_7.webp'
         ]
       },
       {
         label: this.translationService.t('collection.women'),
         description: 'Elegant necklaces with terracotta and gray volcanic stones',
-        imgSrc: '../../assets/images/collection/women/women_3.webp',
+        imgSrc: 'assets/images/collection/women/women_3.webp',
         images: [
-          '../../assets/images/collection/women/women_1.webp',
-          '../../assets/images/collection/women/women_2.webp',
-          '../../assets/images/collection/women/women_3.webp',
-          '../../assets/images/collection/women/women_4.webp',
-          '../../assets/images/collection/women/women_5.webp',
-          '../../assets/images/collection/women/women_6.webp',
-          '../../assets/images/collection/women/women_7.webp',
-          '../../assets/images/collection/women/women_8.webp',
-          '../../assets/images/collection/women/women_9.webp',
-          '../../assets/images/collection/women/women_10.webp',
-          '../../assets/images/collection/women/women_11.webp',
-          '../../assets/images/collection/women/women_12.webp',
-          '../../assets/images/collection/women/women_13.webp',
-          '../../assets/images/collection/women/women_14.webp',
-          '../../assets/images/collection/women/women_15.webp',
-          '../../assets/images/collection/women/women_16.webp',
-          '../../assets/images/collection/women/women_17.webp'
+          'assets/images/collection/women/women_1.webp',
+          'assets/images/collection/women/women_2.webp',
+          'assets/images/collection/women/women_3.webp',
+          'assets/images/collection/women/women_4.webp',
+          'assets/images/collection/women/women_5.webp',
+          'assets/images/collection/women/women_6.webp',
+          'assets/images/collection/women/women_7.webp',
+          'assets/images/collection/women/women_8.webp',
+          'assets/images/collection/women/women_9.webp',
+          'assets/images/collection/women/women_10.webp',
+          'assets/images/collection/women/women_11.webp',
+          'assets/images/collection/women/women_12.webp',
+          'assets/images/collection/women/women_13.webp',
+          'assets/images/collection/women/women_14.webp',
+          'assets/images/collection/women/women_15.webp',
+          'assets/images/collection/women/women_16.webp',
+          'assets/images/collection/women/women_17.webp'
         ]
       },
       {
         label: this.translationService.t('collection.necklace'),
         description: 'Sophisticated pieces combining volcanic stones with gold accents',
-        imgSrc: '../../assets/images/collection/necklace/necklace_1.webp',
+        imgSrc: 'assets/images/collection/necklace/necklace_1.webp',
         images: [
-          '../../assets/images/collection/necklace/necklace_1.webp',
-          '../../assets/images/collection/necklace/necklace_2.webp',
-          '../../assets/images/collection/necklace/necklace_3.webp',
-          '../../assets/images/collection/necklace/necklace_4.webp'
+          'assets/images/collection/necklace/necklace_1.webp',
+          'assets/images/collection/necklace/necklace_2.webp',
+          'assets/images/collection/necklace/necklace_3.webp',
+          'assets/images/collection/necklace/necklace_4.webp'
         ]
       },
       {
         label: this.translationService.t('collection.kids'),
         description: 'Delicate designs inspired by the Aegean Sea',
-        imgSrc: '../../assets/images/collection/kids/kids_1.webp',
+        imgSrc: 'assets/images/collection/kids/kids_1.webp',
         images: [
-          'assets/images/kids1.jpg',
-          'assets/images/kids2.jpg',
-          'assets/images/kids3.jpg'
+          'assets/images/collection/kids/kids_1.webp',
+          'assets/images/collection/kids/kids_2.webp',
+          'assets/images/collection/kids/kids_3.webp'
         ]
       }
     ];

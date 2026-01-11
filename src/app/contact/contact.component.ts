@@ -69,8 +69,7 @@ export class ContactComponent implements AfterViewInit {
   onSubmit(form: NgForm): void {
     if (form.invalid) return;
 
-    // Hier werden nur die URLs der Favoriten mitgeschickt!
-    console.log('Submitting form:', {
+    console.log('Form submitted:', {
       name: form.value.name,
       email: form.value.email,
       message: form.value.message,
