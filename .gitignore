@@ -40,3 +40,21 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment variables & sensitive data
+.env
+.env.local
+.env.*.local
+*.env
+/src/environments/environment.prod.ts
+/src/environments/environment.local.ts
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.tmp
+
+# Email configuration (if using separate config file)
+email-config.ts
+credentials.json

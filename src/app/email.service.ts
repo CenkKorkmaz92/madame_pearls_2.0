@@ -7,6 +7,10 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 export class EmailService {
   // TODO: Replace with your EmailJS credentials
   // Get them from: https://dashboard.emailjs.com/
+  // 
+  // ⚠️ IMPORTANT: After adding real credentials:
+  // 1. Do NOT commit this file with real values to GitHub
+  // 2. Or better: Move to environment.ts and add to .gitignore
   private readonly SERVICE_ID = 'YOUR_SERVICE_ID';
   private readonly TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
   private readonly PUBLIC_KEY = 'YOUR_PUBLIC_KEY';

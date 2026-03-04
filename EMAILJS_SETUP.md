@@ -47,6 +47,12 @@ private readonly TEMPLATE_ID = 'template_abc456';   // Your Template ID
 private readonly PUBLIC_KEY = 'abc123xyz456';       // Your Public Key
 ```
 
+⚠️ **Security Note:** 
+- These keys will be visible in your frontend code (public)
+- EmailJS Public Key is designed for client-side use
+- Never share your EmailJS Private Key
+- Consider using environment variables for production
+
 ### 6. Test Contact Form
 1. Run: `npm start`
 2. Navigate to the contact section
