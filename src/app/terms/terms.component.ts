@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-terms',
@@ -9,6 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './terms.component.scss'
 })
 export class TermsComponent {
+  constructor(public translationService: TranslationService) {}
+
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

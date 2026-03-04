@@ -12,224 +12,367 @@
     <div class="legal-modal-content">
       <!-- Terms & Conditions Content -->
       <div *ngIf="currentModal === 'terms'" class="terms-content">
-        <p class="last-updated">Last Updated: November 12, 2025</p>
+        <!-- German Version -->
+        <div *ngIf="translationService.getCurrentLang() === 'de'">
+          <p class="last-updated">Stand: 04. März 2026</p>
 
-        <div class="section">
-          <h3>1. Introduction</h3>
-          <p>
-            Welcome to Madame Pearls. By accessing and using our website or contacting us through our contact form, 
-            you agree to be bound by these Terms and Conditions. Please read them carefully.
-          </p>
+          <div class="section">
+            <h3>1. Impressum (Angaben gemäß § 5 TMG)</h3>
+            <p><strong>Madame Pearls by VA</strong></p>
+            <p>Inhaberin: Vanessa [Nachname ergänzen]</p>
+            <p>[Straße und Hausnummer ergänzen]</p>
+            <p>[PLZ und Ort ergänzen], Deutschland</p>
+          </div>
+
+          <div class="section">
+            <h3>2. Kontakt</h3>
+            <p>E-Mail: [E-Mail-Adresse ergänzen]</p>
+            <p>Telefon: [Telefonnummer ergänzen]</p>
+          </div>
+
+          <div class="section">
+            <h3>3. Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h3>
+            <p>Vanessa [Nachname ergänzen], Anschrift wie oben.</p>
+          </div>
+
+          <div class="section">
+            <h3>4. Hinweis zur Website</h3>
+            <p>
+              Diese Website ist eine Portfolio- und Präsentationsseite für handgefertigten Schmuck sowie zur
+              Kontaktaufnahme. Es besteht keine direkte Bestell- oder Zahlungsfunktion (kein Online-Shop).
+            </p>
+            <p>
+              Favoriten dienen ausschließlich dazu, Schmuckstücke bei einer Anfrage unverbindlich zu markieren.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>5. Urheberrecht</h3>
+            <p>
+              Inhalte, Fotos, Texte und Designs auf dieser Website unterliegen dem Urheberrecht. Jede Verwertung,
+              Vervielfältigung oder Verwendung außerhalb der gesetzlichen Grenzen bedarf der vorherigen Zustimmung.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>6. Haftung für Inhalte</h3>
+            <p>
+              Die Inhalte wurden mit größter Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität
+              kann jedoch keine Gewähr übernommen werden.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>7. Haftung für Links</h3>
+            <p>
+              Diese Website enthält ggf. Links zu externen Websites Dritter. Auf deren Inhalte besteht kein Einfluss;
+              verantwortlich sind ausschließlich deren Betreiber.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>8. Verbraucherstreitbeilegung</h3>
+            <p>
+              Es besteht keine Verpflichtung und keine Bereitschaft zur Teilnahme an einem Streitbeilegungsverfahren
+              vor einer Verbraucherschlichtungsstelle.
+            </p>
+          </div>
         </div>
 
-        <div class="section">
-          <h3>2. About Our Jewelry</h3>
-          <p>
-            All jewelry pieces offered by Madame Pearls are handcrafted using authentic volcanic stones sourced from 
-            Santorini, Greece. Each piece is unique due to the natural variations in the volcanic stones.
-          </p>
-          <p>
-            We strive to accurately represent our products through images and descriptions, however, natural stone 
-            variations mean your piece may differ slightly from the photographs shown.
-          </p>
-        </div>
+        <!-- English Version (for EN, GR, HR) -->
+        <div *ngIf="translationService.getCurrentLang() !== 'de'">
+          <p class="last-updated">Last Updated: March 4, 2026</p>
 
-        <div class="section">
-          <h3>3. Contact & Inquiries</h3>
-          <p>
-            When you contact us through our contact form, you consent to us using your provided information 
-            (name, email, message, and any favorite items you select) to respond to your inquiry.
-          </p>
-          <p>
-            We will use your contact information solely for the purpose of responding to your inquiry and will 
-            not share it with third parties without your explicit consent.
-          </p>
-        </div>
+          <div class="section">
+            <h3>1. Legal Notice (Imprint)</h3>
+            <p><strong>Madame Pearls by VA</strong></p>
+            <p>Owner: Vanessa [Last name to be added]</p>
+            <p>[Street and number to be added]</p>
+            <p>[Postal code and city to be added], Germany</p>
+          </div>
 
-        <div class="section">
-          <h3>4. Custom Orders & Favorites</h3>
-          <p>
-            The "favorites" feature allows you to select items of interest when contacting us. This does not 
-            constitute a binding order or reservation of items. All custom orders and purchases are subject to 
-            availability and separate agreement.
-          </p>
-        </div>
+          <div class="section">
+            <h3>2. Contact</h3>
+            <p>Email: [Email address to be added]</p>
+            <p>Phone: [Phone number to be added]</p>
+          </div>
 
-        <div class="section">
-          <h3>5. Intellectual Property</h3>
-          <p>
-            All content on this website, including but not limited to images, text, designs, and logos, is the 
-            property of Madame Pearls by VA and is protected by copyright laws. Unauthorized use is prohibited.
-          </p>
-        </div>
+          <div class="section">
+            <h3>3. Responsible for Content</h3>
+            <p>Vanessa [Last name to be added], address as above.</p>
+          </div>
 
-        <div class="section">
-          <h3>6. Product Authenticity</h3>
-          <p>
-            We guarantee that all volcanic stones used in our jewelry are authentic materials sourced from Santorini. 
-            Each piece is handcrafted with care and attention to quality.
-          </p>
-        </div>
+          <div class="section">
+            <h3>4. About This Website</h3>
+            <p>
+              This website serves as a portfolio and presentation platform for handcrafted jewelry and contact purposes.
+              There is no direct ordering or payment functionality (not an online shop).
+            </p>
+            <p>
+              The favorites feature is solely for marking jewelry pieces of interest when making an inquiry.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>7. Limitation of Liability</h3>
-          <p>
-            Madame Pearls shall not be liable for any indirect, incidental, special, or consequential damages arising 
-            from the use of our website or products.
-          </p>
-        </div>
+          <div class="section">
+            <h3>5. Copyright</h3>
+            <p>
+              All content, photos, texts, and designs on this website are protected by copyright. Any use, reproduction,
+              or exploitation beyond legal limits requires prior consent.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>8. Changes to Terms</h3>
-          <p>
-            We reserve the right to modify these Terms and Conditions at any time. Changes will be effective 
-            immediately upon posting to this page. Your continued use of our website constitutes acceptance of 
-            the modified terms.
-          </p>
-        </div>
+          <div class="section">
+            <h3>6. Liability for Content</h3>
+            <p>
+              Content has been created with the utmost care. However, no guarantee can be given for accuracy,
+              completeness, or timeliness.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>9. Governing Law</h3>
-          <p>
-            These Terms and Conditions are governed by and construed in accordance with the laws of the jurisdiction 
-            in which Madame Pearls operates.
-          </p>
-        </div>
+          <div class="section">
+            <h3>7. Liability for Links</h3>
+            <p>
+              This website may contain links to third-party websites. We have no influence on their content;
+              their operators are solely responsible.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>10. Contact Information</h3>
-          <p>
-            If you have any questions about these Terms and Conditions, please contact us through our contact form 
-            on the main page.
-          </p>
+          <div class="section">
+            <h3>8. Consumer Dispute Resolution</h3>
+            <p>
+              We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer
+              arbitration board.
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- Privacy Policy Content -->
       <div *ngIf="currentModal === 'privacy'" class="privacy-content">
-        <p class="last-updated">Last Updated: November 12, 2025</p>
+        <!-- German Version -->
+        <div *ngIf="translationService.getCurrentLang() === 'de'">
+          <p class="last-updated">Stand: 04. März 2026</p>
 
-        <div class="section">
-          <h3>1. Introduction</h3>
-          <p>
-            At Madame Pearls, we are committed to protecting your privacy and ensuring the security of your personal 
-            information. This Privacy Policy explains how we collect, use, and protect your data when you contact us 
-            through our website.
-          </p>
+          <div class="section">
+            <h3>1. Verantwortliche Stelle</h3>
+            <p>
+              Verantwortlich für die Datenverarbeitung auf dieser Website ist die im Impressum genannte Betreiberin.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>2. Zweck und Rechtsgrundlagen der Verarbeitung</h3>
+            <p>Personenbezogene Daten werden nur verarbeitet, soweit dies erforderlich ist, insbesondere:</p>
+            <ul>
+              <li>zur Bearbeitung von Kontaktanfragen (Art. 6 Abs. 1 lit. b DSGVO),</li>
+              <li>zur Kommunikation auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO),</li>
+              <li>auf Grundlage einer Einwilligung, soweit erforderlich (Art. 6 Abs. 1 lit. a DSGVO).</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>3. Verarbeitete Datenkategorien</h3>
+            <p>Bei einer Kontaktaufnahme können folgende Daten verarbeitet werden:</p>
+            <ul>
+              <li>Name</li>
+              <li>E-Mail-Adresse</li>
+              <li>Inhalt der Nachricht</li>
+              <li>optional markierte Favoriten aus der Kollektion</li>
+              <li>bei telefonischer Kontaktaufnahme: Telefonnummer und Gesprächsinhalte</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>4. Empfänger der Daten</h3>
+            <p>
+              Daten werden grundsätzlich nicht verkauft und nur dann an Dritte weitergegeben, wenn dies zur technischen
+              Bereitstellung erforderlich ist (z. B. Hosting oder E-Mail-Provider) oder eine gesetzliche Verpflichtung besteht.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>5. Speicherdauer</h3>
+            <p>
+              Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Bearbeitung der Anfrage erforderlich
+              ist oder gesetzliche Aufbewahrungspflichten bestehen.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>6. Server-Logfiles</h3>
+            <p>
+              Beim Aufruf der Website können durch den Hosting-Anbieter technisch notwendige Verbindungsdaten
+              (z. B. IP-Adresse, Datum/Uhrzeit, angeforderte Datei, Browserinformationen) in Logfiles verarbeitet werden,
+              um Betriebssicherheit und Missbrauchserkennung zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO).
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>7. Kontaktformular und Favoritenfunktion</h3>
+            <p>
+              Die Favoritenfunktion dient nur der unverbindlichen Auswahl von Schmuckstücken als Bezug zu einer Anfrage.
+              Diese Website bietet keine direkte Kauf- oder Zahlungsabwicklung.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>8. Cookies und Tracking</h3>
+            <p>
+              Nach aktuellem Stand werden auf dieser Website keine eigenen Analyse-, Marketing- oder Tracking-Cookies
+              eingesetzt. Änderungen werden in dieser Datenschutzerklärung aktualisiert.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>9. Ihre Rechte nach DSGVO</h3>
+            <p>Sie haben insbesondere folgende Rechte:</p>
+            <ul>
+              <li>Auskunft (Art. 15 DSGVO)</li>
+              <li>Berichtigung (Art. 16 DSGVO)</li>
+              <li>Löschung (Art. 17 DSGVO)</li>
+              <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+              <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+              <li>Widerspruch gegen Verarbeitungen (Art. 21 DSGVO)</li>
+              <li>Widerruf erteilter Einwilligungen mit Wirkung für die Zukunft</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>10. Beschwerderecht</h3>
+            <p>
+              Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind,
+              dass die Verarbeitung Ihrer personenbezogenen Daten rechtswidrig erfolgt.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>11. Datensicherheit</h3>
+            <p>
+              Es werden angemessene technische und organisatorische Maßnahmen getroffen, um personenbezogene Daten
+              gegen Verlust, Missbrauch und unbefugten Zugriff zu schützen.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>12. Aktualität und Änderung</h3>
+            <p>
+              Diese Datenschutzerklärung hat den Stand 04.03.2026 und wird bei rechtlichen oder technischen Änderungen
+              entsprechend angepasst.
+            </p>
+          </div>
         </div>
 
-        <div class="section">
-          <h3>2. Information We Collect</h3>
-          <p>When you use our contact form, we collect the following information:</p>
-          <ul>
-            <li><strong>Name:</strong> To address you properly in our response</li>
-            <li><strong>Email Address:</strong> To communicate with you and respond to your inquiry</li>
-            <li><strong>Message Content:</strong> To understand and respond to your specific inquiry or request</li>
-            <li><strong>Favorite Items:</strong> Images of jewelry pieces you've selected as favorites (optional)</li>
-          </ul>
-        </div>
+        <!-- English Version (for EN, GR, HR) -->
+        <div *ngIf="translationService.getCurrentLang() !== 'de'">
+          <p class="last-updated">Last Updated: March 4, 2026</p>
 
-        <div class="section">
-          <h3>3. How We Use Your Information</h3>
-          <p>We use your personal information exclusively for the following purposes:</p>
-          <ul>
-            <li>To respond to your inquiries and provide customer service</li>
-            <li>To understand your preferences regarding our jewelry pieces</li>
-            <li>To communicate with you about custom orders or product availability</li>
-            <li>To improve our products and services based on customer feedback</li>
-          </ul>
-          <p><strong>We will never:</strong></p>
-          <ul>
-            <li>Sell your personal information to third parties</li>
-            <li>Use your email address for unsolicited marketing without your consent</li>
-            <li>Share your information with third parties except as required by law</li>
-          </ul>
-        </div>
+          <div class="section">
+            <h3>1. Data Controller</h3>
+            <p>
+              The data controller responsible for data processing on this website is the operator named in the legal notice.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>4. Data Storage & Security</h3>
-          <p>
-            Your contact form submissions are processed securely. We implement appropriate technical and organizational 
-            measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.
-          </p>
-          <p>
-            We retain your contact information only for as long as necessary to fulfill the purposes outlined in this 
-            Privacy Policy or as required by law.
-          </p>
-        </div>
+          <div class="section">
+            <h3>2. Purpose and Legal Basis of Processing</h3>
+            <p>Personal data is only processed where necessary, in particular:</p>
+            <ul>
+              <li>to handle contact inquiries (Art. 6(1)(b) GDPR),</li>
+              <li>for communication based on legitimate interests (Art. 6(1)(f) GDPR),</li>
+              <li>based on consent where required (Art. 6(1)(a) GDPR).</li>
+            </ul>
+          </div>
 
-        <div class="section">
-          <h3>5. Cookies & Tracking</h3>
-          <p>
-            Our website uses minimal cookies and local storage to enhance your browsing experience, specifically:
-          </p>
-          <ul>
-            <li><strong>Language Preference:</strong> To remember your preferred language selection</li>
-            <li><strong>Favorite Items:</strong> To temporarily store your favorite jewelry selections in your browser</li>
-          </ul>
-          <p>
-            These are stored locally on your device and are not transmitted to any third parties. You can clear them at 
-            any time through your browser settings.
-          </p>
-        </div>
+          <div class="section">
+            <h3>3. Data Categories Processed</h3>
+            <p>When contacting us, the following data may be processed:</p>
+            <ul>
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Message content</li>
+              <li>Optionally marked favorites from the collection</li>
+              <li>In case of phone contact: phone number and conversation content</li>
+            </ul>
+          </div>
 
-        <div class="section">
-          <h3>6. Third-Party Services</h3>
-          <p>
-            Our website may contain links to third-party websites (such as Instagram). We are not responsible for the 
-            privacy practices of these external sites. We encourage you to review their privacy policies before providing 
-            any personal information.
-          </p>
-        </div>
+          <div class="section">
+            <h3>4. Data Recipients</h3>
+            <p>
+              Data is not sold and only shared with third parties when necessary for technical provision
+              (e.g., hosting or email providers) or when legally required.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>7. Your Rights</h3>
-          <p>You have the right to:</p>
-          <ul>
-            <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
-            <li><strong>Correction:</strong> Request correction of any inaccurate personal data</li>
-            <li><strong>Deletion:</strong> Request deletion of your personal data</li>
-            <li><strong>Objection:</strong> Object to the processing of your personal data</li>
-            <li><strong>Withdrawal:</strong> Withdraw consent for data processing at any time</li>
-          </ul>
-          <p>
-            To exercise any of these rights, please contact us through our contact form with your request.
-          </p>
-        </div>
+          <div class="section">
+            <h3>5. Storage Duration</h3>
+            <p>
+              Personal data is only stored as long as necessary to process the inquiry or as required by
+              legal retention obligations.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>8. Children's Privacy</h3>
-          <p>
-            Our services are not directed to individuals under the age of 16. We do not knowingly collect personal 
-            information from children. If you become aware that a child has provided us with personal information, 
-            please contact us so we can delete such information.
-          </p>
-        </div>
+          <div class="section">
+            <h3>6. Server Log Files</h3>
+            <p>
+              When accessing the website, technically necessary connection data (e.g., IP address, date/time,
+              requested file, browser information) may be processed in log files by the hosting provider to ensure
+              operational security and abuse detection (Art. 6(1)(f) GDPR).
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>9. International Data Transfers</h3>
-          <p>
-            Your information may be transferred to and processed in countries other than your country of residence. 
-            We ensure that appropriate safeguards are in place to protect your personal data in accordance with this 
-            Privacy Policy.
-          </p>
-        </div>
+          <div class="section">
+            <h3>7. Contact Form and Favorites Function</h3>
+            <p>
+              The favorites function serves only for non-binding selection of jewelry pieces when making an inquiry.
+              This website does not offer direct purchase or payment processing.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>10. Changes to This Privacy Policy</h3>
-          <p>
-            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. 
-            We will notify you of any significant changes by posting the new Privacy Policy on this page with an updated 
-            "Last Updated" date.
-          </p>
-        </div>
+          <div class="section">
+            <h3>8. Cookies and Tracking</h3>
+            <p>
+              Currently, this website does not use any proprietary analytics, marketing, or tracking cookies.
+              Any changes will be updated in this privacy policy.
+            </p>
+          </div>
 
-        <div class="section">
-          <h3>11. Contact Us</h3>
-          <p>
-            If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your 
-            personal information, please contact us through our contact form on the main page.
-          </p>
+          <div class="section">
+            <h3>9. Your Rights Under GDPR</h3>
+            <p>You have the following rights in particular:</p>
+            <ul>
+              <li>Access (Art. 15 GDPR)</li>
+              <li>Rectification (Art. 16 GDPR)</li>
+              <li>Erasure (Art. 17 GDPR)</li>
+              <li>Restriction of processing (Art. 18 GDPR)</li>
+              <li>Data portability (Art. 20 GDPR)</li>
+              <li>Objection to processing (Art. 21 GDPR)</li>
+              <li>Withdrawal of consent with future effect</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>10. Right to Complain</h3>
+            <p>
+              You have the right to lodge a complaint with a data protection supervisory authority if you believe
+              that the processing of your personal data is unlawful.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>11. Data Security</h3>
+            <p>
+              Appropriate technical and organizational measures are taken to protect personal data against loss,
+              misuse, and unauthorized access.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>12. Updates and Changes</h3>
+            <p>
+              This privacy policy is dated March 4, 2026, and will be updated accordingly in case of legal or
+              technical changes.
+            </p>
+          </div>
         </div>
       </div>
     </div>
