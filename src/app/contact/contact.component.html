@@ -46,8 +46,9 @@
           </div>
         </div>
 
-        <button type="submit" [disabled]="!contactForm.form.valid">
-          {{ translationService.t('contact.contactMe') }}
+        <button type="submit" [disabled]="!contactForm.form.valid || isSubmitting">
+          <span *ngIf="!isSubmitting">{{ translationService.t('contact.contactMe') }}</span>
+          <span *ngIf="isSubmitting">{{ translationService.getCurrentLang() === 'de' ? 'Wird gesendet...' : 'Sending...' }}</span>
         </button>
       </form>
     </div>

@@ -8,6 +8,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FavoritesService } from '../favorites.service';
 import { TranslationService } from '../translation.service';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-contact',
@@ -18,6 +19,7 @@ import { TranslationService } from '../translation.service';
 })
 export class ContactComponent implements AfterViewInit {
   favoriteImages: string[] = [];
+  isSubmitting = false;
 
   @ViewChild('filePreviewContainer') filePreviewContainer!: ElementRef;
 
@@ -27,7 +29,8 @@ export class ContactComponent implements AfterViewInit {
 
   constructor(
     private favoritesService: FavoritesService,
-    public translationService: TranslationService
+    public translationService: TranslationService,
+    private emailService: EmailService
   ) {
     this.favoritesService.favorites$.subscribe(favs => {
       this.favoriteImages = favs;
@@ -66,20 +69,39 @@ export class ContactComponent implements AfterViewInit {
     this.favoritesService.setFavorites(this.favoriteImages);
   }
 
-  onSubmit(form: NgForm): void {
-    if (form.invalid) return;
+  async onSubmit(form: NgForm): Promise<void> {
+    if (form.invalid || this.isSubmitting) return;
 
-    console.log('Form submitted:', {
-      name: form.value.name,
-      email: form.value.email,
-      message: form.value.message,
-      favoriteImages: this.favoriteImages
-    });
+    this.isSubmitting = true;
 
-    alert('Thank you for your message!');
+    try {
+      await this.emailService.sendContactEmail(
+        form.value.name,
+        form.value.email,
+        form.value.message,
+        this.favoriteImages
+      );
 
-    form.resetForm();
-    this.favoritesService.clearFavorites();
+      // Success message in current language
+      const successMessage = this.translationService.getCurrentLang() === 'de'
+        ? 'Vielen Dank für Ihre Nachricht! Ich melde mich bald bei Ihnen.'
+        : 'Thank you for your message! I will get back to you soon.';
+      
+      alert(successMessage);
+
+      form.resetForm();
+      this.favoritesService.clearFavorites();
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      
+      const errorMessage = this.translationService.getCurrentLang() === 'de'
+        ? 'Entschuldigung, beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.'
+        : 'Sorry, there was an error sending your message. Please try again later.';
+      
+      alert(errorMessage);
+    } finally {
+      this.isSubmitting = false;
+    }
   }
 
   // --------- Modal Vorschau für Favoriten -----------
