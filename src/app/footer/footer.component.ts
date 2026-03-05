@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { TranslationService } from '../translation.service';
 import { ModalLegalService } from '../modal-legal.service';
 
+/**
+ * Footer component - displays site footer with legal links and social media icons.
+ * Provides access to Terms of Service and Privacy Policy modals.
+ */
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -15,20 +19,27 @@ export class FooterComponent {
     private modalLegalService: ModalLegalService
   ) {}
 
-  scrollToHome(): void {
+  /**
+   * Smoothly scrolls the viewport to the top of the page (home section).
+   */
+  public scrollToHome(): void {
     const collectionElement = document.getElementById('home');
     if (collectionElement) {
       collectionElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
-  openTerms(): void {
-    console.log('Opening terms modal');
+  /**
+   * Opens the Terms of Service modal.
+   */
+  public openTerms(): void {
     this.modalLegalService.openTerms();
   }
 
-  openPrivacy(): void {
-    console.log('Opening privacy modal');
+  /**
+   * Opens the Privacy Policy modal.
+   */
+  public openPrivacy(): void {
     this.modalLegalService.openPrivacy();
   }
 }

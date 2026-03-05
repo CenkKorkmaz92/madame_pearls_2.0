@@ -4,6 +4,10 @@ import { ModalLegalService, LegalModalType } from '../modal-legal.service';
 import { TranslationService } from '../translation.service';
 import { Subscription } from 'rxjs';
 
+/**
+ * Legal modal component - displays Terms of Service and Privacy Policy modals.
+ * Subscribes to modal state changes and manages modal visibility.
+ */
 @Component({
   selector: 'app-legal-modal',
   standalone: true,
@@ -12,23 +16,24 @@ import { Subscription } from 'rxjs';
   styleUrl: './legal-modal.component.scss'
 })
 export class LegalModalComponent implements OnInit, OnDestroy {
-  isOpen = false;
-  currentModal: LegalModalType = null;
+  /** Tracks if modal is currently open */
+  public isOpen = false;
+  
+  /** Current modal type being displayed */
+  public currentModal: LegalModalType = null;
+  
+  /** Subscription to modal state changes */
   private subscription?: Subscription;
 
   constructor(
     public modalService: ModalLegalService,
     public translationService: TranslationService
-  ) {
-    console.log('LegalModalComponent constructor');
-  }
+  ) {}
 
   ngOnInit(): void {
     this.subscription = this.modalService.modalState$.subscribe(state => {
-      console.log('Modal state changed:', state);
       this.currentModal = state;
       this.isOpen = state !== null;
-      console.log('isOpen:', this.isOpen, 'currentModal:', this.currentModal);
     });
   }
 
@@ -36,11 +41,18 @@ export class LegalModalComponent implements OnInit, OnDestroy {
     this.subscription?.unsubscribe();
   }
 
-  close(): void {
+  /**
+   * Closes the currently open legal modal.
+   */
+  public close(): void {
     this.modalService.close();
   }
 
-  onBackdropClick(event: MouseEvent): void {
+  /**
+   * Handles backdrop click events - closes modal if clicking outside content.
+   * @param event - Mouse click event
+   */
+  public onBackdropClick(event: MouseEvent): void {
     if (event.target === event.currentTarget) {
       this.close();
     }
