@@ -11,6 +11,20 @@ a,
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Prevent context menu on touch devices */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+/* Allow text selection in specific areas */
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
 /* Global Styles */
 
 // Import animations

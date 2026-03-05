@@ -39,7 +39,8 @@ export class TranslationService {
    * @returns The translated string, or the key itself if translation not found
    */
   public t(key: string): string {
-    return key.split('.').reduce((o, i) => (o ? o[i] : null), this.translations) || key;
+    const result = key.split('.').reduce((o: any, i) => (o ? o[i] : null), this.translations);
+    return result || key;
   }
 
   /**
