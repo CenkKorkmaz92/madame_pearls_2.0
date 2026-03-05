@@ -76,6 +76,9 @@ html {
 .fb-link .icon {
     width: 28px;
     height: 28px;
+    border: 2px solid var(--dark-sand);
+    border-radius: 8px;
+    padding: 4px;
 }
 
 .fb-link:hover {

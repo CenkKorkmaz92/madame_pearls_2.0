@@ -73,7 +73,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 1rem 1rem 0 0;
     text-transform: none;
 }
 
@@ -83,7 +82,6 @@
     object-fit: cover;
     display: block;
     transition: var(--transition-smooth);
-    border-radius: 0 0 1rem 1rem;
     margin: 0;
     padding: 0;
 }
@@ -621,6 +619,9 @@ body.modal-open {
     height: 40px;
     width: auto;
     object-fit: contain;
+    border: 2px solid #4d3e33;
+    box-shadow: 0 0 0 6px var(--dark-sand);
+    border-radius: 8px;
 }
 
 .modal-close-btn {

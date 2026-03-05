@@ -8,14 +8,14 @@
   "start_url": "/madame-pearls/",
   "icons": [
     {
-      "src": "assets/images/logo/app-icon-192.png",
+      "src": "assets/images/logo/app-icon-192.webp",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "assets/images/logo/app-icon-512.png",
+      "src": "assets/images/logo/app-icon-512.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ]
 }

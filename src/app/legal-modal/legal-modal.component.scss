@@ -76,6 +76,9 @@
   height: 40px;
   width: auto;
   object-fit: contain;
+  border: 2px solid #4d3e33;
+  box-shadow: 0 0 0 6px var(--dark-sand);
+  border-radius: 8px;
 }
 
 .close-btn {
