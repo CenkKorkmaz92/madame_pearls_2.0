@@ -4,17 +4,12 @@ a,
 .gallery-item,
 .modal-img-container,
 .flag-btn,
-.hamburger {
+.hamburger,
+img {
   user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
-}
-
-/* Prevent context menu on touch devices */
-* {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
 }
 
 /* Allow text selection in specific areas */
